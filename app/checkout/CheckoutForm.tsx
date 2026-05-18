@@ -48,8 +48,7 @@ export function CheckoutForm() {
         <fieldset className="space-y-4 rounded-2xl border border-ink/5 bg-surface p-6">
           <legend className="px-2 font-medium">Pago</legend>
           <p className="text-sm text-ink-muted">
-            Próximamente: tarjeta, PSE y Nequi con confirmación automática. Sin
-            negociar por chat.
+            Próximamente: tarjeta, PSE y Nequi con confirmación automática.
           </p>
         </fieldset>
       </div>

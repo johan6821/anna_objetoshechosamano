@@ -146,7 +146,7 @@ export const products: Product[] = [
   p({
     id: "candongas-sol",
     slug: "candongas-sol",
-    name: "Candongas Sol",
+    name: "Candongas Wave",
     category: "candongas",
     collection: "tierra",
     desc: "Candongas en tonos cálidos tipo sol y terracota; energía artesanal.",
@@ -192,7 +192,7 @@ export const products: Product[] = [
   p({
     id: "aretes-coleccion-5",
     slug: "aretes-coleccion-5",
-    name: "Aretes Colección 5",
+    name: "Aretes anna serie 5",
     category: "aretes",
     collection: "color",
     desc: "Aretes de la quinta serie del taller: diseño y paleta propios.",
@@ -204,7 +204,7 @@ export const products: Product[] = [
   p({
     id: "aretes-coleccion-7",
     slug: "aretes-coleccion-7",
-    name: "Aretes Colección 7",
+    name: "Aretes de Colección",
     category: "aretes",
     collection: "bohemia",
     desc: "Aretes con movimiento y color de la serie 7; expresivos y livianos.",
@@ -217,7 +217,7 @@ export const products: Product[] = [
   p({
     id: "aretes-luna",
     slug: "aretes-luna",
-    name: "Aretes Luna",
+    name: "Aretes Green 'n Purple",
     category: "aretes",
     collection: "botanica",
     desc: "Aretes inspirados en la luna: curvas suaves y acabado artesanal.",
@@ -229,7 +229,7 @@ export const products: Product[] = [
   p({
     id: "aretes-sol",
     slug: "aretes-sol",
-    name: "Aretes Sol",
+    name: "Aretes Verde Pink",
     category: "aretes",
     collection: "tierra",
     desc: "Aretes con energía solar: tonos cálidos y presencia en el rostro.",
@@ -254,8 +254,8 @@ export const products: Product[] = [
   }),
   p({
     id: "aretes-geometricos-color",
-    slug: "aretes-geometricos-color",
-    name: "Aretes Geométricos Color",
+    slug: "aretes-geo-color",
+    name: "Aretes Geo Color",
     category: "aretes",
     collection: "color",
     desc: "Formas geométricas y contraste de color en arcilla polimérica.",
@@ -349,7 +349,7 @@ export const products: Product[] = [
   p({
     id: "earcuff-colores",
     slug: "earcuff-colores-vivos",
-    name: "Earcuff Colores Vivos",
+    name: "Earcuff MultiColores",
     category: "earcuff",
     collection: "color",
     desc: "Earcuff con paleta alegre y capas de color tras el curado.",
@@ -390,7 +390,7 @@ export const products: Product[] = [
     desc: "Collar inspirado en tonos amatista: profundo, elegante y artesanal.",
     story: "La piedra que inspira calma, traducida a arcilla polimérica con detalle de taller.",
     materials: ["Arcilla polimérica", "Pigmentos profundos", "Cadena ajustable"],
-    price: 52000,
+    price: 35000,
     images: [w("CollarAmatista.jpeg")],
     featured: true,
   }),
