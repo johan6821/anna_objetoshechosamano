@@ -2,6 +2,11 @@
   "name": "anna_objetoshechosamano",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johan6821/anna_objetoshechosamano.git"
+  },
+  "homepage": "https://github.com/johan6821/anna_objetoshechosamano#readme",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
