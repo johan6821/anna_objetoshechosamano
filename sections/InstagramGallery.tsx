@@ -1,12 +1,18 @@
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { getInstagramMosaic } from "@/data/media";
 import { products } from "@/data/products";
 import { siteConfig } from "@/data/site";
 import Image from "next/image";
 import { SectionHeader } from "@/sections/SectionHeader";
 
 export function InstagramGallery() {
-  const tiles = products.slice(0, 6);
+  const workshopTiles = getInstagramMosaic(6);
+  const productTiles = products.slice(0, 3).map((p) => ({
+    src: p.images[0],
+    alt: p.name,
+  }));
+  const tiles = [...workshopTiles, ...productTiles].slice(0, 9);
 
   return (
     <section className="section-wash-pink py-16 md:py-24">
@@ -21,8 +27,8 @@ export function InstagramGallery() {
           />
         </FadeIn>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-          {tiles.map((product, i) => (
-            <FadeIn key={product.id} delay={i * 0.04}>
+          {tiles.map((tile, i) => (
+            <FadeIn key={tile.src} delay={i * 0.04}>
               <a
                 href={siteConfig.instagram}
                 target="_blank"
@@ -30,8 +36,8 @@ export function InstagramGallery() {
                 className="group relative block aspect-square overflow-hidden rounded-2xl border-4 border-white shadow-playful"
               >
                 <Image
-                  src={product.images[0]}
-                  alt={product.name}
+                  src={tile.src}
+                  alt={tile.alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1"
                   sizes="(max-width: 768px) 50vw, 33vw"

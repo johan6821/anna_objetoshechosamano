@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/cn";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type ProductImageProps = {
   src: string;
@@ -23,6 +23,10 @@ export function ProductImage({
 }: ProductImageProps) {
   const [imgSrc, setImgSrc] = useState(src);
 
+  useEffect(() => {
+    setImgSrc(src);
+  }, [src]);
+
   return (
     <div
       className={cn(
@@ -32,6 +36,7 @@ export function ProductImage({
       )}
     >
       <Image
+        key={imgSrc}
         src={imgSrc}
         alt={alt}
         fill
@@ -43,4 +48,3 @@ export function ProductImage({
     </div>
   );
 }
-

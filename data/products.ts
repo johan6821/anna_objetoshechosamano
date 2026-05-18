@@ -1,3 +1,5 @@
+import { workshopMedia } from "@/data/media";
+
 export type ProductCategory =
   | "aretes"
   | "earcuff"
@@ -24,6 +26,7 @@ export type Product = {
 };
 
 const img = (filename: string) => `/images/${encodeURIComponent(filename)}`;
+const w = (filename: string) => workshopMedia(filename);
 
 const PHOTOS = [
   "WhatsApp Image 2026-04-30 at 10.46.38 AM.jpeg",
@@ -65,7 +68,7 @@ export const products: Product[] = [
       "Para quienes aman lo discreto con personalidad. Una línea suave que abraza la oreja sin perforación extra.",
     materials: ["Arcilla polimérica", "Ajuste artesanal", "Acabado mate"],
     price: 12000,
-    images: [img(PHOTOS[1])],
+    images: [img(PHOTOS[1]), w("Earcuff.jpeg"), w("Earcuff (2).jpeg")],
     polymerNote: "Referencia de textura y color del taller.",
     featured: true,
     bestseller: true,
@@ -98,7 +101,7 @@ export const products: Product[] = [
       "Una hoja que captura la luz. El detalle dorado nace en el taller, sin exagerar: elegancia artesanal.",
     materials: ["Arcilla polimérica", "Pan de oro / foil", "Barniz protector"],
     price: 18900,
-    images: [img(PHOTOS[3])],
+    images: [img(PHOTOS[3]), w("Earcuff (3).jpeg"), w("Earcuff (4).jpeg")],
     polymerNote: "Acabado decorativo hecho en el taller.",
     bestseller: true,
   },
@@ -114,7 +117,7 @@ export const products: Product[] = [
       "Formas que juegan con el movimiento del rostro. Geometría imperfecta, vibrante y llena de alegría.",
     materials: ["Arcilla polimérica", "Contraste de capas", "Ganchos hipoalergénicos"],
     price: 22000,
-    images: [img(PHOTOS[4])],
+    images: [img(PHOTOS[4]), w("Aretes (5).jpeg"), w("Aretes (6).jpeg")],
     polymerNote: "Formas definidas a mano antes del horneado.",
     isNew: true,
   },
@@ -130,7 +133,7 @@ export const products: Product[] = [
       "Un vuelo de color en tres piezas. Pensado para regalar o para lucir un look completo con un solo gesto.",
     materials: ["Arcilla polimérica", "Set coordinado", "Empaque artesanal"],
     price: 28500,
-    images: [img(PHOTOS[5])],
+    images: [img(PHOTOS[5]), w("Candongas mini.jpeg"), w("candongasMini.jpeg")],
     polymerNote: "Set pensado para lucir en armonía.",
     featured: true,
   },
@@ -146,7 +149,7 @@ export const products: Product[] = [
       "Largos, ligeros y llenos de ritmo. Cada capa se mueve contigo — ideal para tardes doradas y fotos que brillan.",
     materials: ["Arcilla polimérica", "Capas livianas", "Ganchos reforzados"],
     price: 32000,
-    images: [img(PHOTOS[6])],
+    images: [img(PHOTOS[6]), w("Candongas (5).jpeg"), w("Candongas (6).jpeg")],
     polymerNote: "Colores vivos del taller.",
     bestseller: true,
   },
@@ -162,7 +165,11 @@ export const products: Product[] = [
       "Para la mujer que no pide permiso para brillar. Asimetría deliberada, color sin disculpas.",
     materials: ["Arcilla polimérica", "Diseño asimétrico", "Acabado artesanal"],
     price: 35000,
-    images: [img(PHOTOS[6])],
+    images: [
+      w("EarcuffColores.jpeg"),
+      w("Earcuff (5).jpeg"),
+      w("Earcuff (6).jpeg"),
+    ],
     polymerNote: "Diseño asimétrico modelado a mano.",
     isNew: true,
   },
@@ -175,6 +182,7 @@ export const collections = [
   { id: "botanica", name: "Botánica", desc: "Hojas, oro y naturaleza" },
   { id: "bohemia", name: "Bohemia", desc: "Movimiento y capas largas" },
   { id: "statement", name: "Statement", desc: "Piezas con actitud propia" },
+  { id: "color", name: "Color", desc: "Vibrante y expresivo" },
 ] as const;
 
 export function getProductBySlug(slug: string): Product | undefined {
@@ -197,9 +205,12 @@ export function getBestsellers(): Product[] {
   return products.filter((p) => p.bestseller);
 }
 
+export function getProductsByCollection(collectionId: string): Product[] {
+  return products.filter((p) => p.collection === collectionId);
+}
+
 export function getRelatedProducts(product: Product, limit = 4): Product[] {
   return products
     .filter((p) => p.id !== product.id && p.category === product.category)
     .slice(0, limit);
 }
-

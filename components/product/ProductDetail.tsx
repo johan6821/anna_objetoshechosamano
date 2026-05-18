@@ -10,6 +10,7 @@ import { siteConfig } from "@/data/site";
 import { useCart } from "@/hooks/use-cart";
 import { formatCOP } from "@/lib/format";
 import { cn } from "@/lib/cn";
+import Image from "next/image";
 import { useState } from "react";
 
 type ProductDetailProps = {
@@ -32,6 +33,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 Hecho a mano
               </span>
               <ProductImage
+                key={product.images[activeImage]}
                 src={product.images[activeImage]}
                 alt={product.name}
                 priority
@@ -47,13 +49,19 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     type="button"
                     onClick={() => setActiveImage(index)}
                     className={cn(
-                      "relative h-16 w-14 overflow-hidden rounded-lg border-2",
+                      "relative h-16 w-14 shrink-0 overflow-hidden rounded-lg border-2",
                       activeImage === index
                         ? "border-coral shadow-playful"
                         : "border-pink-soft/60"
                     )}
                   >
-                    <ProductImage src={src} alt="" className="!aspect-auto h-full w-full" />
+                    <Image
+                      src={src}
+                      alt=""
+                      fill
+                      className="object-cover"
+                      sizes="56px"
+                    />
                   </button>
                 ))}
               </div>

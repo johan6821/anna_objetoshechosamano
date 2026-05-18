@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "El arte sanna",
   brandWord: "anna",
   description:
-    "Aretes y earcuffs artesanales en arcilla polimérica. Piezas coloridas, hechas a mano en Colombia con cariño y creatividad.",
+    "Accesorios artesanales en arcilla polimérica: aretes, earcuffs, collares, candongas y más. Hechos a mano en Colombia con cariño y creatividad.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   locale: "es-CO",
   currency: "COP",
