@@ -8,7 +8,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Colección",
   description:
-    "Explora aretes, earcuffs y sets en arcilla polimérica hechos a mano en Colombia.",
+    "Explora aretes, candongas, collares, earcuffs y más accesorios en arcilla polimérica hechos a mano en Colombia.",
 };
 
 type CatalogPageProps = {

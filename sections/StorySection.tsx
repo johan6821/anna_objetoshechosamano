@@ -63,7 +63,7 @@ export function StorySection() {
               <BrandAnna className="text-2xl" />.
             </p>
             <p className="rounded-2xl border-2 border-dashed border-magenta/30 bg-surface/90 p-4 text-ink">
-              Solo arcilla polimérica horneada. Cada par puede variar un poco en
+              Solo arcilla polimérica horneada. Cada pieza puede variar un poco en
               tono: es parte de la magia del handmade.
             </p>
           </div>
