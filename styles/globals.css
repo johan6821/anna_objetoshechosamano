@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta Anna — identidad artesanal */
+  --color-coral: #f55847;
+  --color-coral-soft: #fe8282;
+  --color-coral-hot: #fd4257;
+  --color-gold: #edbd0e;
+  --color-gold-hot: #fe9d02;
+  --color-orange: #f79400;
+  --color-teal: #059696;
+  --color-teal-bright: #00adad;
+  --color-cyan: #1bb0d1;
+  --color-magenta: #ba3f99;
+  --color-pink: #e0248c;
+  --color-pink-alt: #e2258c;
+  --color-pink-soft: #ffa8a3;
+  --color-green: #008f40;
+  --color-purple: #5e1799;
+
+  --color-bg: #fff8f6;
+  --color-bg-warm: #fff5f3;
+  --color-bg-peach: #fff0ee;
+  --color-peach: #fff0ee;
+  --color-ink: #2c1638;
+  --color-ink-muted: #5c3d56;
+  --color-surface: #ffffff;
+
+  --font-anna: var(--font-lilita), "Lilita One", system-ui, sans-serif;
+  --font-display: var(--font-montserrat), "Montserrat", system-ui, sans-serif;
+  --font-body: var(--font-nunito), "Nunito", system-ui, sans-serif;
+
+  --radius-blob: 2.5rem;
+  --radius-card: 1.35rem;
+  --radius-btn: 9999px;
+
+  --shadow-playful: 0 14px 40px rgb(186 63 153 / 0.14);
+  --shadow-card: 0 18px 48px rgb(94 23 153 / 0.12);
+  --shadow-card-hover: 0 22px 56px rgb(224 36 140 / 0.2);
+  --shadow-btn: 0 6px 0 rgb(44 22 56 / 0.15);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    background-color: var(--color-bg);
+    background-image:
+      radial-gradient(ellipse 120% 80% at 10% -10%, rgb(255 168 163 / 0.35), transparent 50%),
+      radial-gradient(ellipse 90% 60% at 95% 5%, rgb(27 176 209 / 0.14), transparent 45%),
+      radial-gradient(ellipse 70% 50% at 50% 100%, rgb(237 189 14 / 0.12), transparent 50%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='%23ba3f99' fill-opacity='0.04'%3E%3Ccircle cx='8' cy='8' r='2'/%3E%3Ccircle cx='38' cy='28' r='1.5'/%3E%3Ccircle cx='22' cy='48' r='1'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    @apply antialiased;
+  }
+
+  ::selection {
+    background: rgb(255 168 163 / 0.55);
+    color: var(--color-ink);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-editorial {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-8;
+  }
+
+  /* “anna” — misma voz que el logo (Lilita One, minúsculas, rosa marca) */
+  .brand-anna {
+    font-family: var(--font-anna);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    color: var(--color-pink);
+    line-height: 1;
+  }
+
+  .brand-anna.text-white {
+    color: #fff;
+  }
+
+  .brand-tagline {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.68em;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-magenta);
+  }
+
+  .eyebrow {
+    font-family: var(--font-display);
+    @apply text-[0.72rem] font-bold uppercase tracking-[0.2em] text-magenta;
+  }
+
+  .display-xl {
+    font-family: var(--font-display);
+    @apply text-[2.35rem] leading-[1.08] font-extrabold tracking-tight text-ink md:text-5xl lg:text-[3.35rem];
+  }
+
+  .display-md {
+    font-family: var(--font-display);
+    @apply text-[1.85rem] leading-tight font-extrabold tracking-tight text-ink md:text-4xl;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .card-artisan {
+    @apply rounded-[var(--radius-card)] border-2 border-pink-soft/50 bg-surface shadow-card transition-all duration-300;
+  }
+
+  .card-artisan:hover {
+    @apply -translate-y-1 border-magenta/40 shadow-card-hover;
+  }
+
+  .btn-playful {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-[var(--radius-btn)] font-display font-bold transition-all duration-200;
+    box-shadow: var(--shadow-btn);
+  }
+
+  .btn-playful:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 rgb(44 22 56 / 0.12);
+  }
+
+  .btn-playful-primary {
+    @apply bg-gradient-to-r from-coral to-coral-hot text-white;
+  }
+
+  .btn-playful-primary:hover {
+    @apply from-coral-hot to-pink brightness-105;
+  }
+
+  .btn-playful-secondary {
+    @apply bg-gradient-to-r from-magenta to-pink text-white;
+  }
+
+  .btn-playful-outline {
+    @apply border-2 border-magenta/35 bg-surface text-ink;
+    box-shadow: 0 4px 0 rgb(186 63 153 / 0.12);
+  }
+
+  .btn-playful-outline:hover {
+    @apply border-coral bg-peach text-coral-hot;
+  }
+
+  .badge-handmade {
+    @apply inline-flex items-center gap-1 rounded-full bg-green px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-white;
+  }
+
+  .badge-new {
+    @apply inline-flex rounded-full bg-cyan px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-white;
+  }
+
+  .badge-star {
+    @apply inline-flex rounded-full bg-gold px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-wide text-ink;
+  }
+
+  .badge-tag {
+    @apply inline-flex rounded-full bg-pink-soft/80 px-2.5 py-0.5 text-[0.7rem] font-semibold text-ink;
+  }
+
+  .section-wash-pink {
+    background: linear-gradient(
+      165deg,
+      rgb(255 168 163 / 0.28) 0%,
+      rgb(255 248 246 / 0.9) 55%,
+      var(--color-bg) 100%
+    );
+  }
+
+  .section-wash-teal {
+    background: linear-gradient(
+      165deg,
+      rgb(27 176 209 / 0.16) 0%,
+      rgb(255 248 246 / 0.95) 60%,
+      var(--color-bg-warm) 100%
+    );
+  }
+
+  .section-wash-gold {
+    background: linear-gradient(
+      165deg,
+      rgb(237 189 14 / 0.22) 0%,
+      rgb(255 245 243) 55%,
+      var(--color-bg) 100%
+    );
+  }
+
+  .section-wash-purple {
+    background: linear-gradient(
+      160deg,
+      rgb(94 23 153 / 0.08) 0%,
+      rgb(255 168 163 / 0.15) 40%,
+      var(--color-bg-peach) 100%
+    );
+  }
+
+  .sticker-float {
+    @apply inline-flex rotate-[-4deg] items-center rounded-xl border-2 border-dashed border-magenta/30 bg-surface px-3 py-1.5 text-xs font-bold text-magenta shadow-playful;
+  }
+
+  .link-fun {
+    @apply font-semibold text-pink transition-colors hover:text-coral-hot;
+  }
+
+  .link-fun:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+    text-underline-offset: 3px;
+  }
+}

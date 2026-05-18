@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Anna Objetos Hechos a Mano — El arte sanna. Aretes y earcuffs artesanales en arcilla polimérica. Envíos en Colombia." />
+  <title>Anna Objetos Hechos a Mano · El arte sanna · Aretes en arcilla polimérica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:ital,wght@0,600;0,700;0,800;1,600&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#" class="logo" aria-label="Anna Objetos Hechos a Mano — inicio">
+        <img class="logo-mark" src="images/Logo.jpeg" width="200" height="200" alt="Anna · El arte sanna" decoding="async" />
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#coleccion">Colección</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button type="button" class="cart-btn" id="cartToggle" aria-expanded="false" aria-controls="cartPanel">
+        Bolsa <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-visual" aria-hidden="true">
+      <img src="images/WhatsApp%20Image%202026-04-30%20at%2010.46.38%20AM.jpeg" alt="" width="600" height="750" loading="eager" decoding="async" />
+    </div>
+    <div class="wrap hero-content">
+      <p class="hero-eyebrow"><span class="brand-anna">anna</span> · Objetos hechos a mano</p>
+      <h1>Aretes y earcuffs en arcilla polimérica</h1>
+      <p class="hero-lead">Piezas modeladas con cariño, color y mucha paciencia: livianas, únicas y con ese toque artesanal que solo sale cuando algo se hace a mano. Precios en pesos colombianos.</p>
+      <a class="btn btn-primary" href="#coleccion">Ver colección</a>
+    </div>
+  </section>
+
+  <main id="coleccion" class="section">
+    <div class="wrap">
+      <header class="section-head">
+        <h2>Colección</h2>
+        <p>
+          Cada pieza nace en <strong>arcilla polimérica</strong> (horneada), con pigmentos y barnices pensados para lucir bonito y sentirse cómodo.
+          Lo que ves en las fotos son creaciones reales del taller: texturas, mezclas de color y detalles que celebran lo hecho a mano.
+        </p>
+      </header>
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </main>
+
+  <section id="nosotros" class="section section-alt">
+    <div class="wrap about">
+      <figure class="about-visual">
+        <img src="images/WhatsApp%20Image%202026-04-30%20at%2010.46.39%20AM%20(1).jpeg" alt="Detalle de joyería artesanal en arcilla polimérica del taller Anna" width="600" height="750" loading="lazy" decoding="async" />
+      </figure>
+      <div class="about-text">
+        <h2>Nosotros</h2>
+        <p>
+          Somos <span class="brand-anna">anna</span> <span class="brand-tagline brand-tagline--inline">El arte sanna</span>: un taller donde la arcilla polimérica se convierte en aretes y earcuffs con personalidad.
+          Amamos las mezclas de color, las formas orgánicas y ese acabado imperfectamente perfecto que solo da el trabajo manual.
+        </p>
+        <p class="about-note">
+          Solo trabajamos arcilla polimérica. Cada par puede variar un poquito en tono o textura: es parte de la magia del handmade, y así ninguna pieza es idéntica a otra.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section">
+    <div class="wrap contact">
+      <h2>Pedidos y encargos</h2>
+      <p class="contact-lead">
+        ¿Quieres reservar, preguntar por envíos o soñar colores a tu medida? Escríbenos con confianza: con gusto te acompañamos paso a paso.
+      </p>
+      <div class="contact-social">
+        <a class="contact-instagram" href="https://www.instagram.com/anna_objetoshechosamano/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @anna_objetoshechosamano
+        </a>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="https://wa.me/573021192550?text=Hola%2C%20vengo%20desde%20la%20web%20de%20Anna%20Objetos%20Hechos%20a%20Mano%20%E2%80%94%20me%20gustar%C3%ADa%20" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn btn-outline" href="https://www.instagram.com/anna_objetoshechosamano/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <span><span class="brand-anna">anna</span> — El arte sanna © <span id="year"></span></span>
+        <a href="https://www.instagram.com/anna_objetoshechosamano/" target="_blank" rel="noopener noreferrer">Instagram @anna_objetoshechosamano</a>
+      </div>
+      <span class="footer-meta">Objetos hechos a mano · Precios en COP · Colombia</span>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/573021192550?text=Hola%2C%20vengo%20desde%20la%20web%20de%20Anna%20Objetos%20Hechos%20a%20Mano" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp">
+    <span class="wa-float__label">WhatsApp +57 302 119 2550</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Bolsa de compras" aria-hidden="true">
+    <div class="cart-panel-inner">
+      <div class="cart-head">
+        <h3>Tu bolsa</h3>
+        <button type="button" class="icon-close" id="cartClose" aria-label="Cerrar">×</button>
+      </div>
+      <ul class="cart-lines" id="cartLines"></ul>
+      <div class="cart-footer">
+        <p class="cart-total">Total: <strong id="cartTotal">$0</strong></p>
+        <p class="cart-note">Te enviamos el detalle por WhatsApp para confirmar pago y envío.</p>
+        <button type="button" class="btn btn-primary btn-block" id="checkoutBtn">Solicitar pedido por WhatsApp</button>
+      </div>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
